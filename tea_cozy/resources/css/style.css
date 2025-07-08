@@ -1,0 +1,155 @@
+* {
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    opacity: 0.9;
+    
+}
+
+body {
+    margin-top: 69px;
+    background-color: rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+/* Header */
+
+.header {
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    top: 0px;
+    height: 69px;
+    width: 100%;
+    border-bottom: 1px solid seashell;
+    align-items: center;
+    background-color: black;
+}
+
+#header-img {
+    display: inline;
+    height: 50px;
+    margin-left: 10px;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-content: flex-start;
+}
+
+header nav {
+    flex-wrap: nowrap;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 5px;
+    align-content: flex-end;
+}
+
+/* Body */
+
+/* Global */
+
+h2 {
+    font-size: 1.5em;
+}
+
+/* Our Mission */
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.mission img {
+    object-fit: cover;
+    height: 700px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.mission #center-band {
+    position: absolute;
+    z-index: 2;
+    width: 1200px;
+    background-color: black;
+    padding: 0px;
+    margin: 10px;
+}
+
+.mission h2, .mission h4 {
+    background-color: transparent;
+    margin: 10px 0px;
+}
+
+/* Tea of the month */
+
+.tea-of-the-month .tea-month-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+    gap: 30px;
+    width: 1000px;
+}
+
+.tea-of-the-month .tea-month-img {
+    display: flex;
+	flex-direction: column;
+	align-content: stretch;
+}
+
+.tea-of-the-month .tea-month-img img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Locations */
+
+.locations {
+    background-image: url(../imgs/img-locations-background.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
+.locations h2 {
+    padding-top: 70px;
+}
+
+.locations .location-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.locations .location {
+    background-color: black;
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    line-height: 2em;
+}
+
+/* Contact section */
+
+.contacts {
+    height: 200px;
+}
+
+.contacts h5 {
+    font-size: 0.7em;
+}
+
+/* Footer */
+
+footer {
+    text-align: left !important;
+}

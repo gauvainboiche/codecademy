@@ -1,0 +1,161 @@
+body {
+    font-family: "Nunito Sans", sans-serif;
+    background-color: seashell;
+    color: rgb(22, 29, 36);
+    box-sizing: border-box;
+}
+
+/* GENERIC ELEMENTS */
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-family: Orbitron, sans-serif;
+}
+
+section {
+    border-bottom: solid 5px black;
+}
+
+.container {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: start;
+	align-content: space-around;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    flex-basis: 100%;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: inline-grid;
+    justify-items: center;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 120px;
+}
+
+header ul li {
+    display: inline-flex;
+}
+
+header ul li:not(:last-child)::after {
+    color: seashell;
+    content: "°";
+    margin: 0 0.5rem;
+}
+
+header ul li a {
+    color: seashell;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    padding: 10px;
+}
+
+/* SECTION : TITLE */
+
+.container .logo-title {
+    margin-top: 80px;
+}
+
+.title-img {
+    margin-top: 130px;
+    width: 600px;
+    height: auto;
+}
+
+/* SECTION : MISSION */
+
+
+
+/* SECTION : PRODUCTS */
+
+.container .presentation {
+    width: 45%;
+    margin: 2.5%;
+}
+
+.presentation img {
+    width: 100%;
+}
+
+/* SECTION : EMPLOYEES */
+
+
+
+/* SECTION : MACHINES */
+
+
+
+/* FOOTER */
+
+footer {
+    width: 500px;
+    font-size: 0.7em;
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* SMALLER SCREEN ADAPTATIONS */
+
+@media only screen and (max-width: 800px) {
+    .container .presentation {
+        width: 90%;
+        margin: 5%;
+    }
+
+    .title-img {
+    margin-top: 60px;
+    width: 300px;
+    height: auto;
+    }
+
+    .logo-img {
+    display: none;
+    }
+
+    header {
+    height: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .title-img {
+    margin-top: 0;
+    }
+
+    .logo-img {
+    display: none;
+    }
+
+    header {
+    display: none;
+    }
+
+    footer {
+    width: 90%;
+    position: static;
+    font-size: 0.5em;
+    text-align: center;
+    margin: 10px auto;
+    }
+}

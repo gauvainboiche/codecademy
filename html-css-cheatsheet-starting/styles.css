@@ -1,0 +1,21 @@
+table {
+    margin: 0 auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    width: 33vw;
+}
+
+#column-1 {
+    background-color: lightblue;
+}
+
+#column-2 {
+    background-color: lightgreen;
+}
+
+#column-3 {
+    background-color: lightcoral;
+}
