@@ -1,92 +1,39 @@
-/* Overall configuration */
-
-body {
-  width: 80%;
-  margin: 0 auto;
-  font-family: "Nunito Sans", sans-serif;
-}
-
-section {
-  border: solid 1px gray;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 20px auto;
-}
-
-.dark {
-  color: white;
-}
-
-/* Colors Elements targeting */
-
-.color-box li {
-  display: inline-block;
-  width: 40%;
-  border: 1px solid gray;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 20px auto;
-  text-align: center;
-}
-
-#goldenrod {
-  background-color: goldenrod;
-}
-
-#salmon {
-  background-color: salmon;
-}
-
-#teal {
-  background-color: teal;
-}
-
-#forestgreen {
-  background-color: forestgreen;
-}
-
-/* Fonts Elements targeting */
-
-#fonts h3 {
-  font-size: 3em;
-  text-decoration: underline;
-  font-weight: 200;
-}
-
-#limelight {
+.limelight-regular {
   font-family: "Limelight", sans-serif;
-  font-size: 1.3em;
-}
-            
-#instrumentserif {
-  font-family: "Instrument Serif", serif;
-  font-size: 2em;
-}
-
-#audiowide {
-  font-family: "Audiowide", sans-serif;
-  font-size: 1.2em;
-}
-
-#manufacturingconsent {
-  font-family: "Manufacturing Consent", system-ui;
-  font-size: 2em;
-}
-
-.regular {
   font-weight: 400;
+  font-style: normal;
 }
 
-.bold {
-  font-weight: 1000;
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.italic {
+.instrument-serif-regular-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
   font-style: italic;
 }
 
-.font-box li {
-  display: inline;
-  padding: 5px;
-  margin: 0 auto;
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.manufacturing-consent-regular {
+  font-family: "Manufacturing Consent", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nunito-sans-<uniquifier> {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
 }
