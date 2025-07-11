@@ -88,7 +88,7 @@ console.log(god.battles);
 
 */
 
-const godNames = god.gods.map(g => g.name);
-const godDomains = god.gods.map(g => g.domain);
+const godNames = god.gods.map(god => god.name);
+const godDomains = god.gods.map(god => god.domain);
 console.log(godNames);
 console.log(godDomains);
