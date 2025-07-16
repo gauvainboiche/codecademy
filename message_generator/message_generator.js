@@ -1,5 +1,8 @@
 const fs = require("fs");
-fs.readFile("./dictionnaire_fr.txt", "utf8", (err, data) => {
+
+fs.readFile("./dictionnaire_fr.txt", "utf8", parseFile);
+
+function parseFile(err, data) {
     if (err) {
     console.error("Erreur de lecture du fichier :", err);
     return;
@@ -30,7 +33,4 @@ fs.readFile("./dictionnaire_fr.txt", "utf8", (err, data) => {
     randomMessage.pop();
     // Join the words into a single string
     console.log(`${randomMessage.join(" ")}.`);
-
-
-});
-
+}
