@@ -45,15 +45,43 @@ function pAequorFactory(specimenNumber, dnaArray) {
     compareDNA(secondDNA) {
       let DNAsimilarities = 0;
       for (let i = 0; i < this._dna.length; i++) {
-        if (this._dna[i] === secondDNA[i]) {
+        if (this._dna[i] === secondDNA.dna[i]) {
           DNAsimilarities++;
         }
       }
-      const commonDNA = DNAsimilarities / 16 * 100; // the *100 is to calculate %age
-      return(`The two DNA threads are ${commonDNA.toFixed(2)}% similar.`);
+      const commonDNA = DNAsimilarities / this._dna.length * 100; // the *100 is to calculate %age
+      return(`The two DNA threads of specimens numbers ${this._specimenNum} and ${secondDNA.specimenNum} are ${commonDNA.toFixed(2)}% similar.`);
+    },
+
+    willLikelySurvive() {
+      let survivalChances = 0;
+      for (let i = 0; i < this._dna.length; i++) {
+        if (this._dna[i] === "G" || this._dna[i] === "C") {
+          survivalChances++;
+        }
+      }
+      const totalChances = survivalChances / this._dna.length * 100; // the *100 is to calculate %age
+      const willSurvive = totalChances >= 60;
+      //console.log(`The specimen #${this._specimenNum} has a DNA composed at ${totalChances}% of C and G bases and thus will likely ${willSurvive ? "survive" : "not survive"}.`);
+      return willSurvive;
     }
     
   };
+}
+
+function pAequorLaboratory(number) {
+  let pAequorLab = [];
+  let i = 0;
+  while (i < number) {
+    let pAequor = mockUpStrand();
+    let pAequorSpecimen = pAequorFactory(i+1, pAequor);
+    if (pAequorSpecimen.willLikelySurvive()) {
+      pAequorLab.push(pAequorSpecimen);
+      i++;
+    }
+  }
+  
+  return pAequorLab;
 }
 
 const pAequor1DNA = mockUpStrand();
@@ -66,4 +94,7 @@ console.log(`
 ${pAequor1.dna}
 ${pAequor2.dna}`);
 
-console.log(pAequor1.compareDNA(pAequor2.dna));
+console.log(pAequor1.compareDNA(pAequor2));
+pAequor1.willLikelySurvive();
+const pAequorLab1 = pAequorLaboratory(30);
+console.log(pAequorLab1);
