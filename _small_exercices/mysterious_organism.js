@@ -97,4 +97,4 @@ ${pAequor2.dna}`);
 console.log(pAequor1.compareDNA(pAequor2));
 pAequor1.willLikelySurvive();
 const pAequorLab1 = pAequorLaboratory(30);
-console.log(pAequorLab1);
+console.log(pAequorLab1.map (pAequor => pAequor.dna.join("")));
