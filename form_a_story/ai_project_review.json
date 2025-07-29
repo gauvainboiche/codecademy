@@ -1,0 +1,53 @@
+{
+    "purpose": [
+        {
+            "description": "Great job! Your form collects all the required information for the story, including animals, adjective, verb, number, yes/no, speed, quote, and a meaningful message. The form submits to story.html using GET as required.",
+            "old_code": "",
+            "new_code": ""
+        },
+        {
+            "description": "The label for the first animal should be 'Animal:' instead of 'First Animal :', and similarly for the other animal and adjective fields. This will better match the project instructions.",
+            "old_code": "<label for=\"animal-1\">First Animal :</label>",
+            "new_code": "<label for=\"animal-1\">Animal:</label>"
+        },
+        {
+            "description": "The label for the adjective should be 'Adjective (ends in -ed):' and for the verb 'Verb (ends in -ing):' to match the instructions.",
+            "old_code": "<label for=\"adj-1\">First Adjectiv (ends in -ed) :</label>",
+            "new_code": "<label for=\"adj-1\">Adjective (ends in -ed):</label>"
+        }
+    ],
+    "readability": [
+        {
+            "description": "Your code is well-structured and each input is clearly labeled, making it easy to follow.",
+            "old_code": "",
+            "new_code": ""
+        },
+        {
+            "description": "Consider removing extra spaces before colons in your labels for consistency and readability.",
+            "old_code": "<label for=\"animal-2\">Second Animal :</label>",
+            "new_code": "<label for=\"animal-2\">Another Animal:</label>"
+        },
+        {
+            "description": "Add placeholder text to your inputs to provide users with example values, as suggested in the challenge task.",
+            "old_code": "<input type=\"text\" id=\"animal-1\" name=\"animal-1\" value=\"fox\" required>",
+            "new_code": "<input type=\"text\" id=\"animal-1\" name=\"animal-1\" value=\"fox\" placeholder=\"e.g. tortoise\" required>"
+        }
+    ],
+    "performance": [
+        {
+            "description": "You used the 'required' attribute and appropriate input types for validation, which is great for user experience.",
+            "old_code": "",
+            "new_code": ""
+        },
+        {
+            "description": "For the radio buttons, you only need the 'required' attribute on one of the options, not both.",
+            "old_code": "<input type=\"radio\" id=\"yes\" name=\"answer\" value=\"yes\" required>\n<label for=\"yes\">Yes</label>\n<input type=\"radio\" id=\"no\" name=\"answer\" value=\"no\" required>\n<label for=\"no\">No</label>",
+            "new_code": "<input type=\"radio\" id=\"yes\" name=\"answer\" value=\"yes\" required>\n<label for=\"yes\">Yes</label>\n<input type=\"radio\" id=\"no\" name=\"answer\" value=\"no\">\n<label for=\"no\">No</label>"
+        },
+        {
+            "description": "You can add more validation to your number input, such as min, max, and step, which you already did. Consider adding minlength or pattern attributes to text fields for even better validation.",
+            "old_code": "<input type=\"text\" id=\"adj-1\" name=\"adj-1\" value=\"gawked\" required>",
+            "new_code": "<input type=\"text\" id=\"adj-1\" name=\"adj-1\" value=\"gawked\" pattern=\".*ed$\" required>"
+        }
+    ]
+}
